@@ -10,6 +10,7 @@ u=[('anu',12),('Arun',43),('Durai',34)]
 s.executemany(t,u)'''
 #s.execute("DELETE FROM bio WHERE Age=12")
 #s.execute("UPDATE bio SET Name='AJAY'WHERE Age=43")
+print("jdknifjsvnv")
 s.execute("SELECT * FROM bio")
 t=s.fetchall()
 for i in t:
