@@ -5,7 +5,7 @@ class details:
         self.name=str(input("Enter the account holder name: "))
         self.acno=int(input("Enter the account number: "))
         print("Your current balance: ",balance)
-
+        print(" ")
 class withdr(details):
     def __init__(self):
         super().__init__()
