@@ -1,7 +1,3 @@
-#insert
-#delete
-#update
-#select
 import mysql.connector
 a=mysql.connector.connect(host="localhost",user="root",password="",database="first_project")
 b=a.cursor()
@@ -16,9 +12,13 @@ if choice==1:
     t="INSERT INTO data (name,age) VALUES (%s,%s)"
     u=[('kousik',16)]
     b.executemany(t,u)
-    a.commit()
 elif choice==2:
-    t="DELETE FROM data WHERE  name=%s"
-    n=input("Enter the name of person you want to delete: ")
-    b.execute(t,n)
-    a.commit()
+    b.execute("DELETE FROM data WHERE age=16")
+elif choice==3:
+    b.execute("UPDATE data SET  age=80 WHERE age=16")
+elif choice==4:
+    b.execute("SELECT * FROM data")
+    t=b.fetchall()
+    for i in t:
+        print(i)
+a.commit()
