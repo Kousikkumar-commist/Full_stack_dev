@@ -1,0 +1,1 @@
+insert into HELLO values ('kouisk',16)
