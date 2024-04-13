@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidden by Link Example</title>
+  <style>
+    /* Styling for the link */
+    .toggle-link {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* Styling for the hidden element */
+    .hidden-element {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+      transition: transform 0.5s ease; /* Adding a transition for smoother animation */
+      backface-visibility: hidden; /* Hide the back face of the element */
+    }
+
+    /* Rotate the hidden element when the .hidden class is applied */
+    .hidden {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Link to toggle the visibility of the element -->
+  <p>Click the link to toggle the visibility:</p>
+  <p><span class="toggle-link" onclick="toggleVisibility()">Toggle Visibility</span></p>
+
+  <!-- Element to be hidden -->
+  <div class="hidden-element">
+    This is the hidden element.
+  </div>
+
+  <script>
+    // Function to toggle visibility of the element
+    function toggleVisibility() {
+      var element = document.querySelector('.hidden-element');
+      element.classList.toggle('hidden'); // Toggle the 'hidden' class
+    }
+  </script>
+
+</body>
+</html>
