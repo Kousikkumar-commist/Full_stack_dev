@@ -69,7 +69,7 @@
                 display: flex;
             }
             .skull{
-
+                display: flex;
             }
             .chat{
                 font-size: 30px;
@@ -108,6 +108,8 @@
             &nbsp;&nbsp;&nbsp;<font style="font-size: 35px;">Name:</font><input type="text" name="user" value="Kousik kumar"><br>
             &nbsp;&nbsp;&nbsp;<font style="font-size: 35px;">Password:</font><input type="text" name="user" placeholder="Password"><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit"><hr>
+            
+        </form>
         <h2 align="center" font-face="arial">ChatGPT</h2>
         <div class="container">
             &nbsp;&nbsp;&nbsp;<div class="skull">
@@ -121,21 +123,18 @@
                 <span style="letter-spacing: 0.10cm;">A digital companion, ready for any discussion.</span>
             </div>
         </div>
-        </form></div>
         
+            
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML canvas tag.</canvas>
+            <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+            </script></div>
         
         <div class="rights"><br><h3>Narrow crew - All rights reserved 2024 © </h3></div>
-
-
-        
-<!--<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML canvas tag.</canvas>
-<script>
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
-ctx.stroke();
-</script>-->
     </body>
 </html>

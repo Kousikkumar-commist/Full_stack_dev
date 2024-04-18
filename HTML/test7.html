@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Drawing</title>
+</head>
+<body>
+
+<canvas id="tableCanvas" width="400" height="200" style="border:1px solid black;"></canvas>
+
+<script>
+    // Get the canvas element
+    var canvas = document.getElementById("tableCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Define table dimensions and cell size
+    var tableWidth = 300;
+    var tableHeight = 150;
+    var cellWidth = 100;
+    var cellHeight = 50;
+
+    // Draw table border
+    ctx.strokeRect(50, 25, tableWidth, tableHeight);
+
+    // Draw horizontal lines
+    ctx.beginPath();
+    ctx.moveTo(50, 75);
+    ctx.lineTo(350, 75);
+    ctx.stroke();
+
+    // Draw vertical lines
+    ctx.beginPath();
+    ctx.moveTo(150, 25);
+    ctx.lineTo(150, 175);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(250, 25);
+    ctx.lineTo(250, 175);
+    ctx.stroke();
+
+    // Add text to cells
+    ctx.font = "14px Arial";
+    ctx.fillText("Cell 1", 75, 50);
+    ctx.fillText("Cell 2", 175, 50);
+    ctx.fillText("Cell 3", 275, 50);
+    ctx.fillText("Cell 4", 75, 125);
+    ctx.fillText("Cell 5", 175, 125);
+    ctx.fillText("Cell 6", 270, 125);
+
+    // circle 
+    ctx.beginPath();
+    ctx.arc(100,55,45,0,2*Math.PI);
+    ctx.stroke();
+
+    // rectangle
+    ctx.beginPath();
+    ctx.fillRect(100,100,200,200);
+    ctx.stroke();
+
+</script>
+
+</body>
+</html>

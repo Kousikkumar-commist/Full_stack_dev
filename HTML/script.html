@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+
+        <canvas id="myCanvas" >TEXT HERE</canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+        </script><br>
+        <canvas id="myCanvas" >TEXT HERE</canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100,50,40,0,2*Math.PI);
+            ctx.stroke();
+        </script>
+    </body>
+</html>
