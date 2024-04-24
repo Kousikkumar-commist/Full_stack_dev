@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+  width: 400px;
+  height: 200px;
+  background-color: #e2dddd;
+  position: relative;
+}
+
+#animate {
+  width: 50px;
+  height: 50px;
+  background-color: #ff0000;
+  position: absolute;
+  top: 75px;
+  animation: move 5s infinite;
+}
+
+@keyframes move {
+  0%   {left: 0;}
+  25%  {left: 150px;}
+  50%  {left: 300px;}
+  75%  {left: 150px;}
+  100% {left: 0;}
+}
+
+#animate.linear {
+  animation-timing-function: linear;
+}
+
+#animate.ease {
+  animation-timing-function: ease;
+}
+
+#animate.ease-in {
+  animation-timing-function: ease-in;
+}
+
+#animate.ease-out {
+  animation-timing-function: ease-out;
+}
+
+#animate.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+  <div id="animate"></div>
+  <div id="animate" class="linear"></div>
+  <div id="animate" class="ease"></div>
+  <div id="animate" class="ease-in"></div>
+  <div id="animate" class="ease-out"></div>
+  <div id="animate" class="ease-in-out"></div>
+</div>
+
+</body>
+</html>
