@@ -3,39 +3,39 @@
 <head>
 <style>
 #container {
-  width: 400px;
+  width: 800px;
   height: 200px;
   background-color: #e2dddd;
 }
-#animate {
+#animate1,#animate2,#animate3,#animate4,#animate5 {
   width: 50px;
   height: 50px;
   background-color: #ff0000;
-  position: absolute;
+  position: relative;
   top:30px;
-  animation: move 5s infinite;
+  animation: move 20s infinite;
 }
 @keyframes move {
   0%   {left: 0;}
   25%  {left: 150px;}
-  50%  {left: 300px;}
+  50%  {left: 700px;}
   75%  {left: 150px;}
   100% {left: 0;}
 }
-#animate1 linear {
-  animation-timing-function: linear;
-}
-#animate2 ease {
+#animate2{
   animation-timing-function: ease;
 }
-#animate3 ease-in {
-  animation-timing-function: ease-in;
-}
-#animate4 ease-out {
+#animate4{
   animation-timing-function: ease-out;
 }
-#animate5 ease-in-out {
+#animate5{
   animation-timing-function: ease-in-out;
+}
+#animate1{
+  animation-timing-function: linear;
+}
+#animate3{
+  animation-timing-function: ease-in;
 }
 </style>
 </head>
@@ -46,7 +46,6 @@
   <div id="animate3" ></div>
   <div id="animate4" ></div>
   <div id="animate5" ></div>
-  <div id="animate6" ></div>
 </div>
 </body>
 </html>
