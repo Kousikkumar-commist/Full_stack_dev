@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Test program
+        </title>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+
+    <p id="demo"></p>
+    <button type="button" onclick=document.getElementById("demo").innerHTML="hello world!!" >submit</button>
+        <script>
+            let x,y,z;
+            let a=10;
+            y=x="Hello ";
+            z=x+y;
+
+            document.getElementById("demo").innerHTML="The value of z is " + z +" "+ a + ".";
+
+            function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+            if(a==10)
+            this.getElementById("demo").innerHTML="9442191979";}
+
+            function mul(num1, num2) {
+            return num1*num2;
+            }
+            var num1 = 5;
+            var num2 = 5;
+            var result=mul(num1, num2)
+            document.getElementById("demo").innerHTML="The result of multiplying"+ num1+ "and"+ num2+ "is:"+result;
+            document.write("Hello everyone");
+            window.alert("Hello! This is an alert message.");
+            console.log("Hello everyone");
+        </script>
+    
+    </body>
+    
+</html>
