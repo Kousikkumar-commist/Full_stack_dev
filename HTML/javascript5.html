@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            add or sub two num
+        </title>
+    </head>
+    <style>
+        .container{
+            display: flex;
+        }
+        .add{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .sub{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <body>
+        <p> Here a=10 and b=20</p>
+        <p id="demo"></p>
+        <div class="container">
+            <button class="add" onclick="add()">ADD</button>
+            <button class="sub" onclick="sub()">SUB</button>
+        </div>
+       
+        <script>
+            let a=10,b=20;
+            function add(){
+                document.getElementById('demo').innerHTML=a+b;
+            }
+            function sub(){
+                document.getElementById('demo').innerHTML=a-b;
+            }
+        </script>
+    </body>
+</html>
