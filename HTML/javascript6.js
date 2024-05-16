@@ -4,9 +4,9 @@ class Greeting {
     }
   
     displayMessage() {
-      console.log(this.message);
+      console.log("hi");
     }
   }
   
   const greeting = new Greeting("Hello, World!");
-  greeting.displayMessage(); // Output: "Hello, World!"
+  greeting.displayMessage(); 

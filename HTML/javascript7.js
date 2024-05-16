@@ -1,3 +1,6 @@
+
+// Randomization program
+
 // Array of quotes
 const quotes = [
     "The only way to do great work is to love what you do. - Steve Jobs",
@@ -18,3 +21,4 @@ function generateRandomQuote() {
 // Generate and display a random quote
 const randomQuote = generateRandomQuote();
 console.log("Random Quote:", randomQuote);
+console.log(quotes.length);
