@@ -1,0 +1,14 @@
+%a  Weedkday,short version  wed
+%A  Weedkday, full version  wednesday
+%w  Weedkday as a number 0-6, 0 is sunday   3
+%d  day of month 01-31  31
+%b  Month name, short version Dec
+%B  month as a munber 01-12 12
+%m  year, short version, without centry 24
+%y  year, full version  2024
+%H  hour 00-23  17
+%I  hour 00-12  05
+%p  Am/Pm   Pm
+%M  minute 00-59    45
+%S  second 00-59    23
+%f  microsecond 000000-999999   548513

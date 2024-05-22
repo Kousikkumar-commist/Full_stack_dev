@@ -10,5 +10,5 @@ class back_page(front_page):
 class page(back_page):
     def __init__(self):
         print(self._hi)
-
+        print(self.__fi)
 page()
