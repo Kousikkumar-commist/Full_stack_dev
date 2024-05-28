@@ -1,9 +1,10 @@
-import c 
+import Inheritance1 
 import platform
 import datetime
 x=datetime.datetime.now()
 v=datetime.datetime(2007,10,31,3,10,59,60)
-print(dir(c)) and print(dir(platform))
+print(dir(Inheritance1))
+print(dir(platform))
 print(v,x)
 print(x.year)
 print(x.strftime("%a"))
