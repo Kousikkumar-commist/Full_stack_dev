@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Divisions with Hover Effect</title>
+    <style>
+        .colorful-div {
+            width: 7px;
+            height: 7px;
+            display: inline-block;
+            margin: 1px 1px 1px 1px; /* Add 2px margin on right and bottom */
+            transition: background-color 0.3s ease; /* Smooth transition on color change */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Function to generate a random color
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Add event listener to change color on mousemove
+        document.addEventListener('mousemove', function(event) {
+            if (event.target.classList.contains('colorful-div')) {
+                event.target.style.backgroundColor = getRandomColor();
+            }
+        });
+
+        // Create and append div elements with random background colors
+        for (var i = 0; i < 1492; i++) {
+            var div = document.createElement("div");
+            div.className = "colorful-div";
+            div.style.backgroundColor = getRandomColor();
+            document.body.appendChild(div);
+        }
+    </script>
+</body>
+</html>

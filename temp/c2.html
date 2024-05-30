@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Content Example</title>
+<style>
+  .example::before {
+    content: 'Note: ';
+    color: red;
+    font-weight: bold;
+  }
+
+  .clearfix::after {
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+</style>
+</head>
+<body>
+
+<p class="example">This is an important message.</p>
+<div class="clearfix">
+  <div style="float: left;">Floating Left</div>
+  <div style="float: right;">Floating Right</div>
+</div>
+
+</body>
+</html>

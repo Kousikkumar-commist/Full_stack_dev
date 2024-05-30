@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Divisions</title>
+    <style>
+        .colorful-div {
+            width: 5px;
+            height: 5px;
+            display: inline-block;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Function to generate a random color
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Get the width and height of the viewport
+        var viewportWidth = window.innerWidth;
+        var viewportHeight = window.innerHeight;
+
+        // Calculate the number of divisions needed horizontally and vertically
+        var numDivsX = Math.ceil(viewportWidth / 5);
+        var numDivsY = Math.ceil(viewportHeight / 5);
+
+        // Create and append div elements with random background colors
+        for (var i = 0; i < numDivsY; i++) {
+            for (var j = 0; j < numDivsX; j++) {
+                var div = document.createElement("div");
+                div.className = "colorful-div";
+                div.style.backgroundColor = getRandomColor();
+                document.body.appendChild(div);
+            }
+            // Add a line break after each row
+            document.body.appendChild(document.createElement("br"));
+        }
+    </script>
+</body>
+</html>
