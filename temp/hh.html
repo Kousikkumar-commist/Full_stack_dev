@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Custom Bullet Example</title>
+<style>
+  .custom-list::before {
+    content: ' ';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<ul>
+  <li class="custom-list">Item 1</li>
+  <li class="custom-list">Item 2</li>
+  <li class="custom-list">Item 3</li>
+</ul>
+
+</body>
+</html>
