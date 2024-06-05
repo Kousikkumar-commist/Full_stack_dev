@@ -5,10 +5,10 @@
   }
   
   body {
-    align-items: center;
+    align-items: center; /* for top and bottem */
     display: flex;
     height: 100vh;
-    justify-content: center;
+    justify-content: center; /* for sides */
   }
   
   .container {
