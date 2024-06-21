@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Soft Tech</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <video autoplay muted loop>
-        <source src="background.mp4" type="video/mp4">
+        <source src="image/background.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     <nav>
@@ -31,7 +32,7 @@
                 <a href="https://nsteducation.com/contact-us/">Contact</a>
             </li>
             <li class="menu-item login">
-                <a class="login.html" href="login.html">LOGIN</a>
+                <a class="login.html" href="templates/login.html">LOGIN</a>
             </li>
         </ul>
     </nav>
