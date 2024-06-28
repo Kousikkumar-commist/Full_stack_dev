@@ -14,6 +14,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'basic',  # Your app must be added here
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -49,8 +50,15 @@ ASGI_APPLICATION = 'main.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'user',
+        'HOST':"localhost",
+        'USER':"root",
+        'password':"",
+        'PORT':'3306',
+        'OPTIONS':{'init_command':"SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+        
     }
 }
 

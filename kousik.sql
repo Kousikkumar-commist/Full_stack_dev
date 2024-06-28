@@ -1,1 +1,1 @@
-select * from HELLO;
+DELETE from DATABASE one

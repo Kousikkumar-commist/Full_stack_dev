@@ -1,15 +1,3 @@
-from __future__ import absolute_import
-
-from django.http import HttpResponse
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
-
-from rules.contrib.views import (
-    LoginRequiredMixin,
-    PermissionRequiredMixin,
-    objectgetter,
-    permission_required,
-)
-
 from django.shortcuts import render,HttpResponse
 from django.template import loader
 
