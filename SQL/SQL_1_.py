@@ -12,4 +12,4 @@ s.executemany(t,u)
 #t=s.fetchall()
 #for i in t:
 #    print(i)
-x.commit()
+x.commit() 

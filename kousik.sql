@@ -1,1 +1,0 @@
-DELETE from DATABASE one

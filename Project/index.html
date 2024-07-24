@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Indian railway</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /*@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');*/
+            body{
+                background-image:url('001.jpg');
+                background-repeat:no-repeat;
+                background-size:cover;
+                font-weight: bold;
+                font-family:  sans-serif;
+            }
+            .news{
+                padding: 0%;
+            }
+            .news p{
+                white-space: nowrap;
+                display: inline-block;
+                padding: 0%;
+                padding-left: 100%;
+                animation: scroll 20s linear infinite;
+            }
+            @keyframes scroll{
+                0%{transform: translateX(0%);}
+                100%{transform: translateX(-100%);}
+            }
+            .gapone{
+                height: 430px;
+                width: 350px;
+                margin-top: 70px;
+                margin-left: 700px;
+                background-color: white;
+                display: block;
+                border-radius: 8%;
+            }
+            .gapone h2{
+                color: rgb(21, 87, 161);
+                padding: 30px;
+                padding-left: 90px;
+
+            }
+            nav{
+                padding: 6px;
+                border-radius: 8px;
+                text-size-adjust: bold;
+                background-color: white;
+            }
+            nav ul{
+                list-style-type: none; 
+            }
+            nav ul li{
+                padding: 10px;
+                display: inline;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>My booking</li>
+                <li>Cancelled</li>
+                <li>Check PNR</li>
+                <li>Train status</li>
+            </ul>
+        </nav>
+        <div class="news">
+            <p>Take advantage of an incredible 30% discount on every booking made
+            from July 1st to July 10th and enjoy fantastic savings on your travel plans!  Attention passengers: Due to unforeseen circumstances,
+             the train scheduled to depart at 10:00 AM will be delayed by 15 minutes. We apologize for any inconvenience this may cause.</p>
+        </div>
+        <hr>
+        <div class="gapone">
+            <h2>Quick Booking</h2>
+        </div>
+        <hr>
+        <div class="details">
+
+        </div>
+    </body>
+</html>
