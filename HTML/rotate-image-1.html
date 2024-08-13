@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Flipper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            display: inline-block;
+            position: relative;
+        }
+
+        img {
+            width: 500px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transform-origin: center;
+        }
+
+        input[type="range"] {
+            width: 500px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Flipper</h1>
+    <div class="container">
+        <img id="image" src="Untitled design.png" alt="Image">
+        <input type="range" id="flipSlider" min="0" max="1" step="0.01" value="0">
+    </div>
+    <script>
+        document.getElementById('flipSlider').addEventListener('input',
+        function() {
+            const flipValue = this.value;
+            /*const flipHorizontal = flipValue <= 0.5 ? 1 - 2 * flipValue : 0;*/
+            const flipVertical = flipValue > 0.5 ? 2 * flipValue - 1 : 0;
+            document.getElementById('image').style.transform = `scaleY(${1 - 2 * flipVertical})`;
+        });
+    </script>
+</body>
+</html>

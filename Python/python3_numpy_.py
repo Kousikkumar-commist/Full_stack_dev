@@ -19,6 +19,6 @@ f=np.array(2)
 h=np.dtype('i2')
 g=np.asarray(2)
 
-#print(a.reshape(2,4,3))  '2' matrix in 4×3 
-print(a.slice(2,7,2)) # here in slice starting value 2 ending value 6(7) and set value 2 so 2 4 6 is output
-print(x,y)
+print(a) # '2' matrix in 4×3 
+#print(a.slice(2,7,2)) # here in slice starting value 2 ending value 6(7) and set value 2 so 2 4 6 is output
+print(x,y,z,f,g,h)

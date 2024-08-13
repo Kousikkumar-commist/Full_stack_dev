@@ -1,7 +1,7 @@
 from scipy import constants
 # print(dir(constants))
 for it in dir(constants):
-    if True and not it.startswith('__') and not 'physical_constants' and not it.startswith('_') and not 'constants' and not 'codata':
+    if True and not it.startswith('__'):
         print(it,'=',getattr(constants,it))
 
 '''import scipy.constants as constants
