@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Effect</title>
+    <style>
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            background: #00aaff; 
+        }
+        canvas { 
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    const particles = [], 
+    colors = ["#fff", "#fffa65", "#ff65a3", "#65d6ff"];
+
+    window.onmousemove = e => particles.push({
+        x: e.x, y: e.y, size: Math.random() * 8 + 2, color: colors[Math.floor(Math.random() * colors.length)],
+        vx: Math.random() * 2 - 1, vy: Math.random() * 2 - 1
+    });
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((p, i) => {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.size = Math.max(0, p.size - 0.1);
+            if (p.size < 0.2) particles.splice(i, 1);
+            ctx.fillStyle = p.color;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+        });
+        requestAnimationFrame(animate);
+    }
+    animate();
+
+    window.onresize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+</script>
+
+</body>
+</html>
